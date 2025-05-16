@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main( string[] args )
         {
             Elephant lloyd = new Elephant() { Name = "Lloyd", EarSize = 40 };
             Elephant lucinda = new Elephant() { Name = "Lucinda", EarSize = 33 };
@@ -38,7 +38,7 @@
                 }
                 else if ( input == "5" )
                 {
-                    lucinda.SpeakTo(lloyd, "Hello Lloyd!" );
+                    lucinda.SpeakTo( lloyd, "Hello Lloyd!" );
                 }
                 else
                 {
@@ -67,9 +67,9 @@
             Console.WriteLine( whoSaidIt.Name + " said: " + message );
         }
 
-        public void SpeakTo(Elephant whoToTalkTo, string message )
+        public void SpeakTo( Elephant whoToTalkTo, string message )
         {
-            whoToTalkTo.HearMessage(message, this );
+            whoToTalkTo.HearMessage( message, this );
         }
 
     }
