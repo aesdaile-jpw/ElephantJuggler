@@ -36,6 +36,10 @@
                     lloyd.EarSize = 4312;
                     lloyd.WhoAmI();
                 }
+                else if ( input == "5" )
+                {
+                    lucinda.SpeakTo(lloyd, "Hello Lloyd!" );
+                }
                 else
                 {
                     return;
@@ -57,6 +61,17 @@
             Console.WriteLine( "My ears are " + EarSize + " inches long" );
         }
 
+        public void HearMessage( string message, Elephant whoSaidIt )
+        {
+            Console.WriteLine( Name + " heard a message" );
+            Console.WriteLine( whoSaidIt.Name + " said: " + message );
+        }
+
+        public void SpeakTo(Elephant whoToTalkTo, string message )
+        {
+            whoToTalkTo.HearMessage(message, this );
+        }
 
     }
+
 }
